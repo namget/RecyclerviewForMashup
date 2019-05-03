@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".listview.ListViewActivity">
+        </activity>
+        <activity android:name=".recyclerview.RecyclerviewActivity">
+        </activity>
+        <activity android:name=".recyclerview.RecyclerviewActivity2">
+        </activity>
+        <activity android:name=".recyclerview.RecyclerviewActivity3">
+        </activity>
+
     </application>
 
 </manifest>
