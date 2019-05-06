@@ -21,14 +21,18 @@ class SpecRecyclerViewAdapter(val list: MutableList<Any>) :
 
 
     class TypeOneViewhodler(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var image: ImageView
-        var name: TextView
-        var price: TextView
+        lateinit var image: ImageView
+        lateinit var name: TextView
+        lateinit var price: TextView
 
         init {
             image = itemView.findViewById(R.id.productImage)
             name = itemView.findViewById(R.id.productName)
             price = itemView.findViewById(R.id.productPrice)
+        }
+
+
+        init {
 
             image.setOnClickListener {
                 Toast.makeText(it.context, "image $adapterPosition", Toast.LENGTH_SHORT).show()
@@ -45,11 +49,13 @@ class SpecRecyclerViewAdapter(val list: MutableList<Any>) :
     }
 
     class TypeTwoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var spec: TextView
+        lateinit var spec: TextView
 
         init {
             spec = itemView.findViewById(R.id.specDescription)
+        }
 
+        init {
             itemView.setOnClickListener {
                 Snackbar.make(itemView.rootView, spec.text.toString(), Snackbar.LENGTH_SHORT).show()
             }
